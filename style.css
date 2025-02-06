@@ -1,0 +1,264 @@
+body {
+    background-color: #f2e0e6;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.page {
+    display: none;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Song Controls */
+.song-controls {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+}
+
+.song-controls input {
+    width: 150px;
+}
+
+.song-controls button {
+    padding: 10px;
+    margin: 5px;
+}
+
+/* Page 1: Video Background */
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Page 2: "This sun don't shine when I'm alone" */
+.background-page {
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.lyrics {
+    font-size: 24px;
+    color: #ff66b2;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+    margin-top: 10px;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Page 4 to 8: Background Images */
+.galaxy-background, .psychedelic-background, .hearts-background, .container-background {
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Page 9: Picture with Lyrics */
+.image {
+    margin-top: 20%;
+    width: 200px;
+    border-radius: 10px;
+}
+
+/* Page 10: Blue Background */
+.blue-background {
+    background-color: #0000ff;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Page 11: Glorify Image */
+.image-container {
+    margin-top: 20%;
+}
+
+.glorified-image {
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+}
+
+.controls {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.controls button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#page1, #page2, #page4, #page5, #page6, #page7, #page8, #page9, #page10, #page11 {
+    display: none;
+}
+
+/* Style for the final page to center content */
+#page12 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    background-color: #fce4ec; /* Light pink background */
+    text-align: center;
+}
+
+.final-message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 30%; /* Push content down a bit */
+}
+
+.final-image {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.final-lyrics {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff69b4;
+    color: white;
+    transition: background-color 0.3s;
+    min-width: 150px; /* Add min-width for better consistency */
+}
+
+button:hover {
+    background-color: #ff1493;
+}
+
+@media screen and (max-width: 768px) {
+    button {
+        padding: 8px 20px;
+        font-size: 14px;
+        min-width: 120px; /* Adjust button size on smaller screens */
+    }
+}
+
+/* Result container for Yes/No response */
+.result {
+    display: none;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 200vh;
+    background-color: #fce4ec;
+}
+
+.result .message-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.result-image {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.result-lyrics {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fce4ec;
+    text-align: center;
+}
+
+.result .message-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.result-image {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.result-lyrics {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+}

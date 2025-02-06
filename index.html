@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background music -->
+    <audio id="bg-music" preload="auto" loop>
+        <source src="cong.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Song controls -->
+    <div class="song-controls">
+        <button id="playBtn">Play</button>
+        <button id="pauseBtn">Pause</button>
+        <button id="seekBackward">Rewind 10s</button>
+        <button id="seekForward">Skip 10s</button>
+        <label for="volume">Volume:</label>
+        <input type="range" id="volume" min="0" max="1" step="0.1" value="1" onchange="adjustVolume(this.value)">
+    </div>
+
+    <!-- Page 1: Video Background & Girlfriend's Picture -->
+    <div class="page" id="page1">
+        <div class="video-container">
+            <video autoplay muted loop>
+                <source src="floating.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <img src="gf1.jpeg" alt="Your GF" class="image">
+    </div>
+
+    <!-- Page 2: "This sun don't shine when I'm alone" with background -->
+    <div class="page" id="page2">
+        <div class="background-page" style="background-image: url('your-background-2.jpg');">
+            <p class="lyrics">This sun don't shine when I'm alone</p>
+        </div>
+    </div>
+
+    <!-- Page 4: Background with lyrics in the middle -->
+    <div class="page" id="page4">
+        <div class="background-page" style="background-image: url('your-background-4.jpg');">
+            <p class="lyrics">I lose my mind and I lose control</p>
+            <p class="lyrics">I see your eyes look through my soul</p>
+        </div>
+    </div>
+
+    <!-- Page 5: Galaxy-type Background with Lyrics -->
+    <div class="page" id="page5">
+        <div class="galaxy-background" style="background-image: url('your-galaxy-background.jpg');">
+            <p class="lyrics">Don't be surprised this all I know</p>
+        </div>
+    </div>
+
+    <!-- Page 6: Psychedelic Background with Lyrics -->
+    <div class="page" id="page6">
+        <div class="psychedelic-background" style="background-image: url('your-psychedelic-background.jpg');">
+            <p class="lyrics">I felt the highs and they felt like you</p>
+        </div>
+    </div>
+
+    <!-- Page 7: Hearts Design Background with Lyrics -->
+    <div class="page" id="page7">
+        <div class="hearts-background" style="background-image: url('your-hearts-background.jpg');">
+            <p class="lyrics">See, a love like mine is too good to be true</p>
+        </div>
+    </div>
+
+    <!-- Page 8: Container background with "And you too divine" -->
+    <div class="page" id="page8">
+        <div class="container-background" style="background-image: url('your-container-background.jpg');">
+            <p class="lyrics">And you too divine</p>
+        </div>
+    </div>
+
+    <!-- Page 9: Picture with Lyrics -->
+    <div class="page" id="page9">
+        <img src="kiss.jpeg" alt="Your GF" class="image">
+        <p class="lyrics">to just be mine</p>
+    </div>
+
+    <!-- Page 10: Blue Background with Lyrics -->
+    <div class="page" id="page10">
+        <div class="blue-background">
+            <p class="lyrics">You remind me of the color blue</p>
+        </div>
+    </div>
+
+    <!-- Page 11: Picture with Lyrics -->
+    <div class="page" id="page11">
+        <div class="image-container">
+            <img src="hug.jpeg" alt="Your GF" class="glorified-image">
+        </div>
+        <p class="lyrics">Girl, I'm so in love with you, yeah</p>
+        <p class="lyrics">Girl, I'm so in love with you</p>
+    </div>
+
+    <!-- Page 12: "Will You be my Valentine?" Page -->
+    <div class="page" id="page12">
+        <div class="final-message">
+            <img src="cinamon.gif" 
+            alt="Your GF" class="final-image">
+            <p class="final-lyrics">Will You be my Valentine? <span>😊</span></p>
+            <button id="yesBtn">Yes</button>
+            <button id="noBtn">No</button>
+        </div>
+    </div>
+
+    <!-- Control Buttons -->
+    <div class="controls">
+        <button id="prevBtn">Previous</button>
+        <button id="nextBtn">Next</button>
+    </div>
+
+    <script src="java.js"></script>
+</body>
+</html> 
